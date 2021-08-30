@@ -7,122 +7,199 @@
   <link rel="shortcut icon" href="assets/images/haulsmart_icon.png" type="image/x-icon">
   <link rel="icon" href="assets/images/haulsmart_icon.png" type="image/x-icon">
   <title>JON MORGAN</title>
-  <link rel="stylesheet" href="assets/css/reset.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!--<link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />-->
 </head>
+<style>
+  /* color scheme sourced from http://khroma.co/generator/ */
+:root {
+  --outer-space: #33393f;
+  --bright-turquoise: #2aefcb;
+  --gin: #e0eae4;
+  --heliotrope: #ffffff;
+}
 
+/* set content highlight color and background */
+::selection {
+  background-color: var(--bright-turquoise);
+  color: var(--outer-space);
+}
+html,body{
+  width:100%;
+  padding:0px;
+  background-color: var(--outer-space);
+}
+  canvas{
+    position: absolute;
+    top:0px;
+    display:block;
+    width:100%;
+    height:calc(100% - 10px);
+    z-index:1;
+  }
+  video{
+    width:100%;
+  }
+  #about{
+    background-color: var(--outer-space);
+  }
+  .image-cropper {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+#selfimg {
+  display: inline;
+  margin: 0 auto;
+  height: 200px;
+  width: auto;
+}
+img.rounded {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+#movietext{
+  bottom: calc(2vw + 2px)*-1;
+}
+h3{
+  cursor:pointer;
+  font-family:'Courier New', Courier, monospace;
+  color:#33FF33;
+}
+</style>
 <body>
 
-  
-
-  <header style="position:relative;;z-index:1;margin-top:10px">
-    <img src="assets/images/title.png" style="width:300px"/>
-    <h3 class="page-title">
-      Mining Engineer, Web Developer, Entreprenuer
+  <header style="position:relative;z-index:3;top:0px;text-align:center">
+   <div><img src="assets/images/Optimining Logo.png" style="max-width:250px;width:30%"/></div> 
+    <h3 class="header">
+      Mining Engineering & Consulting
+    </h3>
+    <h3 class="header">
+      Digitization & Web Development
     </h3>
     <p></p>
   </header>
-  <div style="margin:10% 10%;auto;position:relative;z-index:0;margin-top:10px">
-    <video id="movie" width="100%" loop="true" muted autoplay>
+  <main>
+  <div style="position:relative;z-index:0;width:80%;margin:auto">
+    <video id="movie" loop="true" muted autoplay>
       <source src="header.mp4" type='video/mp4; codecs=avc1.42E01E, mp4a.40.2"' />  
     </video>
-    <!--<img src="assets/images/header.png" style="width:100%;position:absolute"/> -->
+    <canvas id="myCanvas" ></canvas>
+    <div id="movietext" style="position:absolute;left:5px;letter-spacing:0.5em;z-index:2;white-space: pre;width:100%;font:bold 2vw Courier New;color:rgb(0,204,0)">
+    </div>
+    <div id="about" style="display:none;z-index:4;position:absolute;top:0px;left:0px;width:100%;height:100%">
+      <img id="selfimg" src="assets/images/jmorgan.jpg" class="rounded" />
+    </div>
+    <div id="map" style="display:none;z-index:4;position:absolute;top:0px;left:0px"></div>
   </div>
-  <main>
  
-    <section class="row justify-center">
-      <div class="card-column">
-        <figure class="card code-card">
-          <h2 class="card-header">Flexbox Row</h2>
-          <div class="card-body">
-            <p>Use these three properties to create a Flexbox row layout.</p>
-          </div>
-          <!-- with the <pre> element, it counts all spaces literally, so proper code indentation cannot be applied in this case -->
-          <pre class="code-block"><code>.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}</code></pre>
-        </figure>
-      </div>
-      <div class="card-column">
-        <figure class="card code-card">
-          <h2 class="card-header">Flexbox Column</h2>
-          <div class="card-body">
-            <p>Use this to create a Flexbox column layout.</p>
-          </div>
-          <pre class="code-block"><code>.column {
-  display: flex;
-  flex-direction: column
-}</code></pre>
-        </figure>
-      </div>
-
-      <div class="card-column">
-        <figure class="card code-card">
-          <h2 class="card-header">CSS Grid Layout</h2>
-          <div class="card-body">
-            <p>Build a 12-column layout using CSS Grid</p>
-          </div>
-          <pre class="code-block"><code>.grid {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(12, 1fr);
-}</code></pre>
-        </figure>
-      </div>
-      <div class="card-column">
-        <figure class="card code-card">
-          <h2 class="card-header">Linear Gradients</h2>
-          <div class="card-body">
-            <p>This will create a background linear gradient from top to bottom.</p>
-          </div>
-          <pre class="code-block"><code>.linear-gradient-background {
-  background-image: linear-gradient(
-    rgba(232, 102, 236, 0.3) 0%,
-    rgba(232, 102, 236, 0.6) 100%
-  );
-}</code></pre>
-        </figure>
-      </div>
-      <div class="card-column">
-        <figure class="card code-card">
-          <h2 class="card-header">Box Transition Glow</h2>
-          <div class="card-body">
-            <p>Use transition and box shadows to glow on hover.</p>
-          </div>
-          <pre class="code-block"><code>.code-card .card-header {
-  border-radius: 8px;
-  transition: all 0.5s ease-in-out;
-}
-
-.code-card:hover,
-.code-card:hover .card-header {
-  box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
-}</code></pre>
-        </figure>
-      </div>
-
-      <div class="card-column">
-        <figure class="card code-card">
-          <h2 class="card-header">Overlay Card with Title</h2>
-          <div class="card-body">
-            <p>Use position properties and negative margins to raise elements higher than their natural starting point.
-            </p>
-          </div>
-          <pre class="code-block"><code>.card-header {
-  position: relative;
-  margin-top: -20px;
-}</code></pre>
-        </figure>
-      </div>
-    </section>
   </main>
 
-  <footer>
-    <h3>Made with <span role="img" aria-label="heart">❤️</span> and CSS</h3>
+  <footer style="position:relative;text-align:center">
+   <br/>
+    <h6>Copyright OptiMining Pty Ltd 2021</h6>
   </footer>
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+var amountOfFallingArrays = 70;
+var squareDimension = 10;
+var fallingArrays = [];
 
+function FallingArray(x,y){
+ this.x = x;
+ this.y = y;
+ this.letters = [];
+ var amount = Math.floor(Math.random()*30) + 5;
+ for(var a=0;a<amount;a++){
+   var charNum = Math.floor(Math.random()*50) + 35;
+   this.letters.push(String.fromCharCode(charNum));
+ } 
+}
+
+for(var a=0;a<amountOfFallingArrays;a++){
+  var randomY = Math.floor(Math.random()*10) + squareDimension;
+  fallingArrays.push(new FallingArray(a*squareDimension,randomY));
+}
+
+for(var a=0;a<40;a++){
+  var randomX = Math.floor(Math.random()*40)*squareDimension;
+  var randomY = Math.floor(Math.random()*10)*squareDimension*-1;
+  fallingArrays.push(new FallingArray(randomX, randomY));
+}
+
+function cascadeData(){
+  var w = document.getElementById("myCanvas").width;
+  var h = document.getElementById("myCanvas").height;
+  t = w/700;
+  console.log(w);
+  console.log(h);
+  ctx.clearRect(0,0,w,h);
+  for(var a=0;a<fallingArrays.length;a++){
+    for(var b=0;b<fallingArrays[a].letters.length;b++){
+      var color = "rgb(0,255,0)";
+      if(b == 0){
+        ctx.fillStyle = "rgb(51,255,51)";
+      } else {
+        ctx.fillStyle = "rgb(0,128,0)";
+      }
+      //if(w<800)
+      //ctx.font = "8px Courier";
+      //} else {
+      ctx.font = t+"em Courier";
+      //}  
+      ctx.fillText(fallingArrays[a].letters[b], fallingArrays[a].x, fallingArrays[a].y + (-1 * b * squareDimension)); 
+    }
+    fallingArrays[a].y += squareDimension;
+    if(fallingArrays[a].y - fallingArrays[a].letters.length * squareDimension > h){
+      var randomX = Math.floor(Math.random()*40)*squareDimension;
+      var randomY = Math.floor(Math.random()*10)*squareDimension * -1;
+      fallingArrays[a] = new FallingArray(randomX, randomY);
+    }
+  }
+}
+
+setInterval(cascadeData,100)
+
+var movietext = ["PROJECT MANAGEMENT","MINING ENGINEERING","CONSULTANCY","TIME AND MOTION STUDIES","DATA ANALYTICS","LOAD & HAUL","DRILL & BLAST","DIGITISED SOLUTIONS","WEBSITE & APP DEVELOPMENT"];
+
+var textpos = 0;
+function  cascadeText(){
+var str = movietext[textpos]; 
+document.getElementById("movietext").innerHTML=str; 
+if(textpos==8){
+textpos = 0; 
+} else {
+textpos = textpos +1;
+}
+}
+setTimeout(setInterval(cascadeText,1000),2000);
+
+var colortext = ["#99FF99","#33FF33","#00CC00","#009900"];
+var colorpos = 0;
+function  colorText(){
+var w = document.getElementById("myCanvas").width;
+var s = w/100;
+var hex = colortext[colorpos]; 
+document.getElementById("movietext").style.color=hex; 
+//document.getElementsByName("h3").style.color=hex; 
+document.getElementById("movietext").style.fontSize='2vm';
+document.getElementById("movietext").style.letterSpacing=s;
+if(colorpos==3){
+colorpos = 0; 
+} else {
+colorpos = colorpos +1;
+}
+}
+setInterval(colorText,100);
+
+
+ </script> 
 </body>
 
 </html>
