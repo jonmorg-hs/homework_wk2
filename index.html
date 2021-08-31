@@ -25,8 +25,9 @@
   color: var(--outer-space);
 }
 html,body{
+  height:100%;
   width:100%;
-  padding:0px;
+  margin:0px;
   background-color: var(--outer-space);
 }
   canvas{
@@ -40,9 +41,7 @@ html,body{
   video{
     width:100%;
   }
-  #about{
-    background-color: var(--outer-space);
-  }
+ 
   .image-cropper {
   width: 100px;
   height: 100px;
@@ -66,49 +65,292 @@ img.rounded {
 #movietext{
   bottom: calc(2vw + 2px)*-1;
 }
+h2{
+  font-family:Arial, Helvetica, sans-serif;
+  color:hsl(32, 80%, 51%); 
+}
 h3{
   cursor:pointer;
   font-family:'Courier New', Courier, monospace;
   color:#33FF33;
 }
+h4,h6{
+  font-family:'Courier New', Courier, monospace;
+  color:#33FF33;
+}
+p {
+  font-family:'Arial Narrow';
+  font-size:calc(14px + 1vw);
+  margin-right:40px;
+  color:#ffffff;
+  letter-spacing:4px;
+}
+@media screen and (min-width: 768px) {
+  /* on tablets, set columns to only be 50% of the width and not grow */
+  .vid,section,#about{
+    max-width: 100%;
+    margin:auto;
+  }
+  #movietext{
+    font-size:calc(10px + 1vw);
+    letter-spacing:0.8em;
+  }
+}
+
+/* media query for larger screens */
+@media screen and (min-width: 992px) {
+  .vid,section,#about{
+    max-width: 1500px; 
+    margin:auto;
+  }
+  #movietext{
+    font-size:calc(10px + 1vw);
+    letter-spacing:0.8em;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* on tablets, set columns to only be 50% of the width and not grow */
+  .vid,section,#about{
+    max-width: 100%;
+    margin:auto;
+  }
+  #movietext{
+    font-size:calc(8px + 1vw);
+    letter-spacing:0.8em;
+  }
+}
+
+input[type=button] {
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  font:normal 14px Arial;
+  background-color:coral;
+  border:none;
+}
+#menu{
+ position:absolute;
+ width:300px;
+ height:100%;
+ z-index:99;
+ top:0px;
+ left:0px;
+ background-color:var(--outer-space);
+ box-shadow: 0 0 10px 10px var(--outer-space);
+ display:none;
+}
+.line{
+    margin-top:-1px;
+    width: 290px;
+    height: 1px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    }
+ .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  margin-left:10px;
+  color:white;
+  font:normal 16px 'Arial Narrow';
+  letter-spacing:5px; 
+  text-decoration:none;
+}
+.bgimg-1,.bgimg-2,.bgimg-3 ,.bgimg-4,.bgimg-5,.bgimg-6{
+position: relative;
+opacity: 0.65;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.bgimg-1{
+  background-image:url(assets/images/IMG_0530.jpg); 
+  min-height:500px;
+}
+.bgimg-2{
+  background-image:url(assets/images/bg_image.png);
+  min-height:500px;
+}
+.bgimg-3{
+  background-image:url(assets/images/haulsmart.png);
+  background-position: left;
+  min-height:500px;
+}
+.bgimg-4{
+  background-image:url(assets/images/IMG_1270.jpg);
+  min-height:500px;
+}
+.bgimg-5{
+  background-image:url(assets/images/jmorgan.jpg);
+  background-size: contain;
+  min-height:500px;
+}
+.bgimg-6{
+  background-image:url(assets/images/bg_image1.jpg);
+  min-height:500px;
+}
+.caption{
+  position:absolute;
+  padding:20px;
+  left:0;
+  top:20%;
+  width:100%;
+  text-align:center;
+  color: #000;
+}
+#movietext{
+  position:absolute;
+  left:5px;
+  z-index:6;
+  white-space: pre;
+  width:100%;
+  font-weight:bold;
+  font-family:Arial;
+  color:rgb(0,204,0)"
+}
 </style>
 <body>
 
-  <header style="position:relative;z-index:3;top:0px;text-align:center">
-   <div><img src="assets/images/Optimining Logo.png" style="max-width:250px;width:30%"/></div> 
-    <h3 class="header">
-      Mining Engineering & Consulting
-    </h3>
-    <h3 class="header">
-      Digitization & Web Development
-    </h3>
-    <p></p>
-  </header>
-  <main>
-  <div style="position:relative;z-index:0;width:80%;margin:auto">
+  <div id="menu">
+  <img src="assets/images/close_btn.png" onclick="hideMenu()" style="margin-left:15px;margin-top:15px;width:50px;height:50px"/>
+  <br/><br/><br/>
+  <div >
+  <div style="margin-left:10px;height:40px" class="container" onclick="hideMenu()"><a href="#section1">BACKGROUND</a></div>
+  <div class="line"></div>
+  <div style="margin-left:10px;height:40px" class="container" onclick="hideMenu()"><a href="#section3">HAULSMART</a></div>
+  <div class="line"></div>
+  <div style="margin-left:10px;height:40px" class="container" onclick="hideMenu()"><a href="#section2">ANALYTICS</a></div>
+  <div class="line"></div>
+  <div style="margin-left:10px;height:40px" class="container" onclick="hideMenu()"><a href="#section4">CONSULTING</a></div>
+  <div class="line"></div>
+  <div style="margin-left:10px;height:40px" class="container" onclick="hideMenu()"><a href="#section5">CONTACT US</a></div>
+  <div class="line"></div>
+</div>
+</div>
+  <div class="vid" style="position:relative;z-index:0;margin:auto">
     <video id="movie" loop="true" muted autoplay>
       <source src="header.mp4" type='video/mp4; codecs=avc1.42E01E, mp4a.40.2"' />  
     </video>
     <canvas id="myCanvas" ></canvas>
-    <div id="movietext" style="position:absolute;left:5px;letter-spacing:0.5em;z-index:2;white-space: pre;width:100%;font:bold 2vw Courier New;color:rgb(0,204,0)">
-    </div>
-    <div id="about" style="display:none;z-index:4;position:absolute;top:0px;left:0px;width:100%;height:100%">
-      <img id="selfimg" src="assets/images/jmorgan.jpg" class="rounded" />
+    <img src="assets/images/menu_btn.png" onclick="showMenu()" style="cursor:pointer;position:absolute;z-index:2;left:10px;top:10px;max-width:50px;width:30%"/>
+    <img src="assets/images/Optimining Logo.png" style="opacity:0.5;position:absolute;z-index:1;right:5px;max-width:200px;width:30%"/>
+    <div id="movietext">
     </div>
     <div id="map" style="display:none;z-index:4;position:absolute;top:0px;left:0px"></div>
   </div>
- 
-  </main>
+</header>
 
-  <footer style="position:relative;text-align:center">
+<div class="vid" style="margin-top:100px">
+  <h2 style="margin-left:5px">BACKGROUND</h2>  
+<div class="bgimg-1">
+  <div class="caption">
+    <p>
+      OptiMining Pty Ltd was established in 2012 to develop the iOS app, HaulSmart, to capture basic cycle time and productivity data for remote earthworks projects in Malawi and Namibia. We were seeking an easily deployable solution that would utilise new mobile devices and cloud servers for HME data capture using inbuilt device sensors and 3G networks in order to download CSV files into our existing daily production spreadsheets as part of Consultancy and Contract Services.
+     </p>
+</div>
+</div>
+  <div id="section1" >  
+  <div >
+  <div >
+    <br/>
+    <!--<input type="button" value="FIND OUT MORE"/>-->
+    <br/><br/><br/>
+  </div>
+  </div>
+</div>
+
+
+<h2 style="margin-left:5px">HAULSMART APPS AND WEBSITE</h2>
+    <div class="bgimg-3">
+      <div class="caption">
+        <p style="color:rgb(255, 255, 255)">
+          We further developed the HaulSmart website to geospatially visualize data on Google Maps from our own iOS and progressive web apps (PWAs), plus data from other sources such as Drone Images and Videos, OEM API's, and survey DXF's, to create a shared platform for site personnel to assist with meetings, production reporting and live short interval control.
+         </p>
+      </div>    
+    </div>
+    <div id="section3" >  
+      <div >
+      <div >
+        <br/>
+       <input type="button" value="FIND OUT MORE"/>
+        <br/><br/><br/>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="margin-left:5px">BIG DATA AND ANALYTICS</h2>
+  <div class="bgimg-2">
+    <div class="caption">
+      <p>
+        We can assist digitizing your earthworks or mining operation with establishing and managing your cloud server architecture to store all operational data into a secure AWS data lake. Using the latest technology we can visualize data in a user friendly and intuitive format on our platform for all personnel levels across your operations.
+       </p>
+    </div>  
+  </div>
+  <div id="section2" >  
+    <div  >
+    <div >
+      <br/>
+      <input type="button" value="FIND OUT MORE"/>
+      <br/><br/><br/>
+    </div>
+  </div>
+</div>
+
+<h2 style="margin-left:5px">MINING ENGINEERING AND PRODUCTIVITY CONSULTING</h2>
+  <div class="bgimg-4">
+    <img src="assets/images/drone.png" style="position:absolute;top:20px;right:100px;width:80px"/>
+    <div class="caption">
+
+      <p>
+        With our own purpose built apps in our toolbox, we can mobilise to site and quickly set up data capture tools on your machines and present our findings in real time. Using drone footage we can also provide supporting footage with analytics to clarify our findings. 
+       </p>
+    </div>  
+  </div>
+  <div id="section4" >  
+    <div  >
+    <div >
+      <br/>
+      <input type="button" value="FIND OUT MORE"/>
+      <br/><br/><br/>
+    </div>
+  </div>
+</div>
+
+  <h2 style="margin-left:5px">CONTACT US</h2>
+    <div class="bgimg-5">
+      <div class="caption">
+        <p>
+          Our Senior Mining Engineer, Jon Morgan, has 25 years operational experience in engineering, supervisory and management roles on earthworks, construction and greenfield mining projects in Australia, Tanzania, Namibia, Malawi, Mozambique, Zambia and Ghana. 
+         </p>       
+      </div>    
+    </div>
+    <div id="section5" style="width:60%">  
+      <div >
+      <div >
+        <br/>
+       <input type="button" value="FIND OUT MORE"/>
+        <br/><br/><br/>
+      </div>
+    </div>
+  </div>
+    </div>
+  <footer style="position:relative;margin-top:50px;text-align:center;height:500px" >
    <br/>
-    <h6>Copyright OptiMining Pty Ltd 2021</h6>
+   <br/>
+   <br/>
+   <a href="https://twitter.com/Optimining" target="_black"><img src="assets/images/login_twitter.png" title="FOLLOW US" style="cursor:pointer;margin-left:5px; width:50px;height:50px"></a>
+   <a href="mailto:admin@optimining.com.au?subject=General%20Enquiry" target="_black"><img src="assets/images/login_email.png" title="CONTACT US" style="cursor:pointer;margin-left:15px; width:50px;height:50px"></a>
+   <a href="https://www.linkedin.com/company/optimining-pty-ltd" target="_black"><img src="assets/images/login_linkedin.png" title="LINK WITH US" style="cursor:pointer;margin-left:5px; width:50px;height:50px"></a>
+   
+    <h6 style="position:absolute;left:50%;margin-left:-100px;bottom:10px;">Copyright OptiMining Pty Ltd 2021</h6>
   </footer>
 <script>
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var amountOfFallingArrays = 70;
-var squareDimension = 10;
+var squareDimension = 12;
 var fallingArrays = [];
 
 function FallingArray(x,y){
@@ -136,9 +378,7 @@ for(var a=0;a<40;a++){
 function cascadeData(){
   var w = document.getElementById("myCanvas").width;
   var h = document.getElementById("myCanvas").height;
-  t = w/700;
-  console.log(w);
-  console.log(h);
+  t = w/400;
   ctx.clearRect(0,0,w,h);
   for(var a=0;a<fallingArrays.length;a++){
     for(var b=0;b<fallingArrays[a].letters.length;b++){
@@ -180,16 +420,16 @@ textpos = textpos +1;
 }
 setTimeout(setInterval(cascadeText,1000),2000);
 
+
 var colortext = ["#99FF99","#33FF33","#00CC00","#009900"];
 var colorpos = 0;
 function  colorText(){
 var w = document.getElementById("myCanvas").width;
-var s = w/100;
+var s = w/50;
 var hex = colortext[colorpos]; 
-document.getElementById("movietext").style.color=hex; 
-//document.getElementsByName("h3").style.color=hex; 
-document.getElementById("movietext").style.fontSize='2vm';
-document.getElementById("movietext").style.letterSpacing=s;
+document.getElementById("movietext").style.color=hex;  
+document.getElementById("movietext").style.fontSize = '2vm';
+document.getElementById("movietext").style.letterSpacing = s;
 if(colorpos==3){
 colorpos = 0; 
 } else {
@@ -197,6 +437,48 @@ colorpos = colorpos +1;
 }
 }
 setInterval(colorText,100);
+
+
+function showHome(){
+  var d = document.getElementById("about").style.display="none";
+  var s = document.getElementById("services").style.display="none";
+  var c = document.getElementById("contact").style.display="none";
+  var a = document.getElementById("apps").style.display="none"; 
+}
+
+function showApps(){
+  var a = document.getElementById("apps").style.display="block"; 
+  var d = document.getElementById("about").style.display="none";
+  var s = document.getElementById("services").style.display="none";
+  var c = document.getElementById("contact").style.display="none";
+}
+
+function showAbout(){
+  var d = document.getElementById("about").style.display="block";
+  var s = document.getElementById("services").style.display="none";
+  var c = document.getElementById("contact").style.display="none";
+  var a = document.getElementById("apps").style.display="none"; 
+}
+
+function showServices(){
+  var s = document.getElementById("services").style.display="block";
+  var d = document.getElementById("about").style.display="none";
+  var c = document.getElementById("contact").style.display="none";
+  var a = document.getElementById("apps").style.display="none"; 
+}
+function showContact(){
+  var c = document.getElementById("contact").style.display="block";
+  var s = document.getElementById("services").style.display="none";
+  var d = document.getElementById("about").style.display="none";
+  var a = document.getElementById("apps").style.display="none"; 
+}
+function showMenu(){
+  var m = document.getElementById("menu").style.display="block";
+}
+
+function hideMenu(){
+  var m = document.getElementById("menu").style.display="none";
+}
 
 
  </script> 
