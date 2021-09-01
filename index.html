@@ -54,7 +54,7 @@
       <p>
         OptiMining Pty Ltd was established in 2012 to develop the iOS app, HaulSmart, to capture basic cycle time and productivity data for remote earthworks projects in Malawi and Namibia. We were seeking an easily deployable solution that would utilise new mobile devices and cloud servers for HME data capture using inbuilt device sensors and 3G networks in order to download CSV files into our existing daily production spreadsheets as part of Consultancy and Contract Services.
      </p>
-     <input type="button" value="FIND OUT MORE"/>
+     <input type="button" value="FIND OUT MORE" onclick="openPage('background')"/>
     </div>
     <div class="parallax__container">
       <div class="parallax" data-parallax-image="assets/images/bgimg-1.png"></div>
@@ -68,7 +68,7 @@
     <p>
       We further developed the HaulSmart website to geospatially visualize data on Google Maps from our own iOS and progressive web apps (PWAs), plus data from other sources such as Drone Images and Videos, OEM API's, and survey DXF's, to create a shared platform for site personnel to assist with meetings, production reporting and live short interval control.
     </p>
-    <input type="button" value="FIND OUT MORE"/>
+    <input type="button" value="FIND OUT MORE" onclick="openPage('haulsmart')"/>
   </div>
   <div class="parallax__container">
     <div class="parallax" data-parallax-image="assets/images/bgimg-3.png"></div>
@@ -82,7 +82,7 @@
     <p>
       We can assist digitizing your earthworks or mining operation with establishing and managing your cloud server architecture to store all operational data into a secure AWS data lake. Using the latest technology we can visualize data in a user friendly and intuitive format on our platform for all personnel levels across your operations.
      </p>
-     <input type="button" value="FIND OUT MORE"/>
+     <input type="button" value="FIND OUT MORE" onclick="openPage('data')"/>
   </div>
   <div class="parallax__container">
     <div class="parallax" data-parallax-image="assets/images/bgimg-2.png"></div>
@@ -97,7 +97,7 @@
       <p>
         With our own purpose built apps in our toolbox, we can mobilise to site and quickly set up data capture tools on your machines and present our findings in real time. Using drone footage we can also provide supporting footage with analytics to clarify our findings. 
        </p>
-       <input type="button" value="FIND OUT MORE"/>
+       <input type="button" value="FIND OUT MORE" onclick="openPage('consulting')"/>
     </div>
     <div class="parallax__container">
       <div class="parallax" data-parallax-image="assets/images/bgimg-4.png"></div>
@@ -112,7 +112,7 @@
       <p>
         Our Senior Mining Engineer, Jon Morgan, has 25 years operational experience in engineering, supervision and management roles on earthworks, construction and greenfield mining projects in Australia, Tanzania, Namibia, Malawi, Mozambique, Zambia and Ghana. 
       </p>
-      <input type="button" value="FIND OUT MORE"/>
+      <input type="button" value="FIND OUT MORE" onclick="openPage('contact')"/>
     </div>
     <div class="parallax__container">
       <div class="parallax" data-parallax-image="assets/images/bgimg-5.png" ></div>
@@ -233,6 +233,14 @@ function showMenu(){
 
 function hideMenu(){
   var m = document.getElementById("menu").style.display="none";
+}
+
+function openPage(id){
+if(id=='haulsmart'){
+window.open('https://www.haulsmart.com');	
+} else {
+	alert('Stay Tuned');
+}
 }
 
  </script> 
