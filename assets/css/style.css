@@ -179,7 +179,7 @@ footer{
 
 @media screen and (min-width: 768px) {
   /* on tablets, set columns to only be 50% of the width and not grow */
-  .vid,section,#about{
+  .vid,section{
     max-width: 100%;
     margin:auto;
   }
@@ -193,8 +193,8 @@ footer{
 }
 
 /* media query for larger screens */
-@media screen and (min-width: 992px) {
-  .vid,section,#about{
+@media screen and (min-width: 1500px) {
+  .vid,section{
     max-width: 1500px; 
     margin:auto;
   }
@@ -203,17 +203,19 @@ footer{
     letter-spacing:0.8em;
   }
   #menu_btn{
-    margin-left:calc(10% + 10px);
+    margin-left:calc(10% + (100% - 1500px)/2);
   }  
 }
 @media screen and (max-width: 768px) {
   /* on tablets, set columns to only be 50% of the width and not grow */
-  .vid,section,#about{
+  .vid,section{
     max-width: 100%;
     margin:auto;
   }
+  #menu_btn{
+    margin-left:calc(10% + 10px);
+  } 
   #movietext{
     font-size:calc(8px + 1vw);
     letter-spacing:0.8em;
   }
-}
