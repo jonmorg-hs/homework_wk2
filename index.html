@@ -8,282 +8,38 @@
   <link rel="icon" href="assets/images/optimining_icon.png" type="image/x-icon">
   <title>OPTIMINING</title>
 <link rel="stylesheet" href="assets/css/reset.css" />
-  <!--<link rel="stylesheet" href="./assets/css/style.css" />-->
+<link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <style>
-  /* color scheme sourced from http://khroma.co/generator/ */
-:root {
-  --outer-space: #33393f;
-  --bright-turquoise: #2aefcb;
-  --gin: #e0eae4;
-  --heliotrope: #ffffff;
-}
-
-/* set content highlight color and background */
-::selection {
-  background-color: var(--bright-turquoise);
-  color: var(--outer-space);
-}
-html,body{
-  height:100%;
-  width:100%;
-  margin:0px;
-  background-color: var(--outer-space);
-}
-  canvas{
-    position: absolute;
-    top:0px;
-    display:block;
-    width:100%;
-    height:calc(100% - 10px);
-    z-index:1;
-  }
-  video{
-    width:100%;
-  }
  
-  .image-cropper {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-}
-
-#selfimg {
-  display: inline;
-  margin: 0 auto;
-  height: 200px;
-  width: auto;
-}
-img.rounded {
-  object-fit: cover;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-}
-#movietext{
-  bottom: calc(2vw + 2px)*-1;
-}
-h2{
-  font-family:Arial, Helvetica, sans-serif;
-  color:hsl(32, 80%, 51%); 
-  font-size:calc(14px + 0.2vw);
-}
-h3{
-  cursor:pointer;
-  font-family:'Courier New', Courier, monospace;
-  color:#33FF33;
-}
-h4,h6{
-  font-family:'Courier New', Courier, monospace;
-  color:#33FF33;
-}
-p {
-  font-family:Arial;
-  font-size:calc(14px + 1vw);
-  margin-right:40px;
-  color:#ffffff;
-  letter-spacing:4px;
-}
-@media screen and (min-width: 768px) {
-  /* on tablets, set columns to only be 50% of the width and not grow */
-  .vid,section,#about{
-    max-width: 100%;
-    margin:auto;
-  }
-  #movietext{
-    font-size:calc(10px + 1vw);
-    letter-spacing:0.8em;
-  }
-}
-
-/* media query for larger screens */
-@media screen and (min-width: 992px) {
-  .vid,section,#about{
-    max-width: 1500px; 
-    margin:auto;
-  }
-  #movietext{
-    font-size:calc(10px + 1vw);
-    letter-spacing:0.8em;
-  }
-}
-@media screen and (max-width: 768px) {
-  /* on tablets, set columns to only be 50% of the width and not grow */
-  .vid,section,#about{
-    max-width: 100%;
-    margin:auto;
-  }
-  #movietext{
-    font-size:calc(8px + 1vw);
-    letter-spacing:0.8em;
-  }
-}
-
-input[type=button] {
-  width: 200px;
-  height: 30px;
-  border-radius: 10px;
-  font:normal 14px Arial;
-  background-color:coral;
-  border:none;
-}
-#menu{
- position:absolute;
- width:300px;
- height:100%;
- z-index:99;
- top:0px;
- left:0px;
- background-color:var(--outer-space);
- box-shadow: 0 0 10px 10px var(--outer-space);
- display:none;
-}
-.line{
-    margin-top:-1px;
-    width: 290px;
-    height: 1px;
-    border-bottom: 2px solid rgb(255, 255, 255);
-    }
- .container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-a{
-  margin-left:10px;
-  color:white;
-  font:normal 16px Arial;
-  letter-spacing:5px; 
-  text-decoration:none;
-}
-
-#movietext{
-  position:absolute;
-  left:5px;
-  z-index:6;
-  white-space: pre;
-  width:100%;
-  font-weight:bold;
-  font-family:Arial;
-  color:rgb(0,204,0)"
-}
-
-
-*,:after,:before{
-  box-sizing:border-box
-  }
-        h1,h2,p{
-          text-shadow:0 0 5px rgba(0,0,0,.6);
-          width:100%
-          }
-          h1,h2{
-            font-size:calc(14px + 1vw);
-            line-height:1
-            }
-            h1{
-              margin-bottom:10px;
-              margin-top:-2px
-              }
-              h2{
-                margin-bottom:20px
-                }
-                p{
-                  font-size:20px;
-                  font-size:1.25rem;
-                  letter-spacing:0;
-                  letter-spacing:.02rem;
-                  line-height:1.3;
-                  margin-bottom:20px
-                  }
-                  p:last-child{
-                    margin-bottom:0
-                    }
-                            .container{
-                              -webkit-align-items:center;
-                              align-items:center;
-                              display:-webkit-flex;
-                              display:-ms-flexbox;
-                              display:flex;
-                              -ms-flex-align:center;
-                              -webkit-flex-wrap:wrap;
-                              -ms-flex-wrap:wrap;
-                              flex-wrap:wrap;
-                              margin:0;
-                              padding:15px;
-                              position:relative;
-                              width:100%;
-                              z-index:1;
-                              }
-                              .container--big{
-                                height:175vh
-                                }
-                                .container--full{
-                                  height:100vh
-                                  }
-                                  .container--small{
-                                    height:75vh;
-                                    }
-                                    .container .content{
-                                      position:absolute;
-                                      background:rgba(0,0,0,.75);
-                                      border-radius:8px;
-                                      color:#fff;
-                                      margin:10 auto;
-                                      padding:30px 35px;
-                                      text-align:center;
-                                      opacity:0.5;
-                                    }
-                                      .parallax__container{
-                                        clip:rect(0,auto,auto,0);
-                                        height:100%;
-                                        left:0;
-                                        overflow:hidden;
-                                        position:absolute;
-                                        top:0;
-                                        width:100%;
-                                        z-index:-100
-                                        }
-                                        .parallax__container .parallax{
-                                          background-position:center;
-                                          background-repeat:no-repeat;
-                                          background-size:cover;
-                                          position:fixed;
-                                          top:0;
-                                          -webkit-transform:translate3d(0,0,0);
-                                          transform:translate3d(0,0,0);
-                                          -webkit-transform-style:preserve-3d;
-                                          transform-style:preserve-3d;
-                                          width:100%
-                                          }
 
 </style>
 <body>
-
+  <img id="menu_btn" src="assets/images/menu_btn.png" onclick="showMenu()"/>
+    
   <div id="menu">
   <img src="assets/images/close_btn.png" onclick="hideMenu()" style="margin-left:15px;margin-top:15px;width:50px;height:50px"/>
   <br/><br/><br/>
   <div >
-  <div style="margin-left:10px;height:40px" class="container" onclick="hideMenu()"><a href="#section1">BACKGROUND</a></div>
+  <div class="menu_option" onclick="hideMenu()"><a href="#section1">BACKGROUND</a></div>
   <div class="line"></div>
-  <div style="margin-left:10px;height:40px" class="container" onclick="hideMenu()"><a href="#section3">HAULSMART</a></div>
+  <div class="menu_option" onclick="hideMenu()"><a href="#section3">HAULSMART APPS</a></div>
   <div class="line"></div>
-  <div style="margin-left:10px;height:40px" class="container" onclick="hideMenu()"><a href="#section2">ANALYTICS</a></div>
+  <div class="menu_option" onclick="hideMenu()"><a href="#section2">DATA ANALYTICS</a></div>
   <div class="line"></div>
-  <div style="margin-left:10px;height:40px" class="container" onclick="hideMenu()"><a href="#section4">CONSULTING</a></div>
+  <div class="menu_option" onclick="hideMenu()"><a href="#section4">CONSULTING</a></div>
   <div class="line"></div>
-  <div style="margin-left:10px;height:40px" class="container" onclick="hideMenu()"><a href="#section5">CONTACT US</a></div>
+  <div class="menu_option" onclick="hideMenu()"><a href="#section5">CONTACT US</a></div>
   <div class="line"></div>
 </div>
 </div>
+
 <header>
-  <div class="vid" style="position:relative;z-index:0;margin:auto">
+  <div class="vid" >
     <video id="movie" loop="true" muted autoplay playsinline>
       <source src="header.mp4" type='video/mp4; codecs=avc1.42E01E, mp4a.40.2"' />  
     </video>
     <canvas id="myCanvas" ></canvas>
-    <img src="assets/images/menu_btn.png" onclick="showMenu()" style="cursor:pointer;position:absolute;z-index:2;left:10px;top:10px;max-width:50px;width:30%"/>
     <img src="assets/images/Optimining Logo.png" style="opacity:0.5;position:absolute;z-index:1;right:5px;max-width:200px;width:30%"/>
     <div id="movietext">
     </div>
@@ -292,8 +48,8 @@ a{
 
 <main class="vid" style="margin-top:70px">
 
-  <h2 style="margin-left:5px">BACKGROUND</h2> 
-  <section class="container container--small">
+  <h2 >BACKGROUND</h2> 
+  <section id="section1" class="container">
     <div class="content">
       <p>
         OptiMining Pty Ltd was established in 2012 to develop the iOS app, HaulSmart, to capture basic cycle time and productivity data for remote earthworks projects in Malawi and Namibia. We were seeking an easily deployable solution that would utilise new mobile devices and cloud servers for HME data capture using inbuilt device sensors and 3G networks in order to download CSV files into our existing daily production spreadsheets as part of Consultancy and Contract Services.
@@ -306,13 +62,13 @@ a{
     <br/><br/>
     </section> 
 
-<h2 style="margin-left:5px">HAULSMART APPS AND WEBSITE</h2>
-<section class="container container--small">
+<h2 >HAULSMART APPS AND WEBSITE</h2>
+<section id="section3" class="container">
   <div class="content">
     <p>
       We further developed the HaulSmart website to geospatially visualize data on Google Maps from our own iOS and progressive web apps (PWAs), plus data from other sources such as Drone Images and Videos, OEM API's, and survey DXF's, to create a shared platform for site personnel to assist with meetings, production reporting and live short interval control.
-         </p>
-         <input type="button" value="FIND OUT MORE"/>
+    </p>
+    <input type="button" value="FIND OUT MORE"/>
   </div>
   <div class="parallax__container">
     <div class="parallax" data-parallax-image="assets/images/bgimg-3.png"></div>
@@ -320,8 +76,8 @@ a{
   <br/><br/>
   </section> 
 
-  <h2 style="margin-left:5px">BIG DATA AND ANALYTICS</h2>
-  <section class="container container--small">
+  <h2 >BIG DATA AND ANALYTICS</h2>
+  <section id="section2" class="container">
   <div class="content">
     <p>
       We can assist digitizing your earthworks or mining operation with establishing and managing your cloud server architecture to store all operational data into a secure AWS data lake. Using the latest technology we can visualize data in a user friendly and intuitive format on our platform for all personnel levels across your operations.
@@ -334,8 +90,8 @@ a{
   <br/><br/>
   </section>
   
-  <h2 style="margin-left:5px">MINING ENGINEERING AND PRODUCTIVITY CONSULTING</h2>
-  <section class="container container--small">
+  <h2 >MINING ENGINEERING AND PRODUCTIVITY CONSULTING</h2>
+  <section id="section4" class="container">
     <img src="assets/images/drone.png" style="position:absolute;top:20px;right:100px;width:80px"/>
     <div class="content">
       <p>
@@ -350,8 +106,8 @@ a{
     </section>
 
 
-  <h2 style="margin-left:5px">CONTACT US</h2>
-  <section class="container container--small">
+  <h2 >CONTACT US</h2>
+  <section id="section5" class="container">
     <div class="content">
       <p>
         Our Senior Mining Engineer, Jon Morgan, has 25 years operational experience in engineering, supervision and management roles on earthworks, construction and greenfield mining projects in Australia, Tanzania, Namibia, Malawi, Mozambique, Zambia and Ghana. 
@@ -366,18 +122,19 @@ a{
     </section>
   </main>
 
-  <footer class="vid" style="position:relative;margin-top:50px;text-align:center;height:500px" >
+  <footer class="vid" >
     <video id="movie" loop="true" muted autoplay playsinline>
       <source src="footer.mp4" type='video/mp4; codecs=avc1.42E01E, mp4a.40.2"' />  
     </video>
     <br/><br/>
-    <a href="https://twitter.com/Optimining" target="_black"><img src="assets/images/login_twitter.png" title="FOLLOW US" style="cursor:pointer;margin-left:5px; width:50px;height:50px"></a>
-    <a href="mailto:admin@optimining.com.au?subject=General%20Enquiry" target="_black"><img src="assets/images/login_email.png" title="CONTACT US" style="cursor:pointer;margin-left:15px; width:50px;height:50px"></a>
-    <a href="https://www.linkedin.com/company/optimining-pty-ltd" target="_black"><img src="assets/images/login_linkedin.png" title="LINK WITH US" style="cursor:pointer;margin-left:5px; width:50px;height:50px"></a>
+    <a href="https://twitter.com/Optimining" target="_black"><img src="assets/images/login_twitter.png" title="FOLLOW US" class="contact_btns"></a>
+    <a href="mailto:admin@optimining.com.au?subject=General%20Enquiry" target="_black"><img src="assets/images/login_email.png" title="CONTACT US" class="contact_btns"></a>
+    <a href="https://www.linkedin.com/company/optimining-pty-ltd" target="_black"><img src="assets/images/login_linkedin.png" title="LINK WITH US" class="contact_btns"></a>
     <br/><br/>
     <h6>Copyright OptiMining Pty Ltd 2021</h6>
     <br/><br/>
   </footer>
+
 <script>
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
