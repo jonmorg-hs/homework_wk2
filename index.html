@@ -9,8 +9,6 @@
   <title>OPTIMINING</title>
 <link rel="stylesheet" href="assets/css/reset.css" />
   <!--<link rel="stylesheet" href="./assets/css/style.css" />-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="parallax.js"></script>
 </head>
 <style>
   /* color scheme sourced from http://khroma.co/generator/ */
@@ -161,15 +159,6 @@ a{
   text-decoration:none;
 }
 
-.caption{
-  position:absolute;
-  padding:20px;
-  left:0;
-  top:20%;
-  width:100%;
-  text-align:center;
-  color: #000;
-}
 #movietext{
   position:absolute;
   left:5px;
@@ -180,10 +169,131 @@ a{
   font-family:Arial;
   color:rgb(0,204,0)"
 }
-.parallax-window {
-    min-height: 500px;
-    background: transparent;
-}
+
+
+*,:after,:before{
+  box-sizing:border-box
+  }
+        h1,h2,p{
+          text-shadow:0 0 5px rgba(0,0,0,.6);
+          width:100%
+          }
+          h1,h2{
+            font-size:40px;
+            font-size:2.5rem;
+            font-weight:700;
+            line-height:1
+            }
+            h1{
+              margin-bottom:10px;
+              margin-top:-2px
+              }
+              h2{
+                margin-bottom:20px
+                }
+                p{
+                  font-size:20px;
+                  font-size:1.25rem;
+                  letter-spacing:0;
+                  letter-spacing:.02rem;
+                  line-height:1.3;
+                  margin-bottom:20px
+                  }
+                  p:last-child{
+                    margin-bottom:0
+                    }
+                    p.p--credits{
+                      font-size:14px;
+                      font-size:.9rem
+                      }
+                      p strong{
+                        display:inline-block;
+                        margin-bottom:2px
+                        }
+                        a{
+                          color:#fff;
+                          font-weight:700;
+                          text-decoration:none
+                          }
+                          a.a--no-weight{
+                            font-style:italic;
+                            font-weight:300
+                            }
+                            .container{
+                              -webkit-align-items:center;
+                              align-items:center;
+                              display:-webkit-flex;
+                              display:-ms-flexbox;
+                              display:flex;
+                              -ms-flex-align:center;
+                              -webkit-flex-wrap:wrap;
+                              -ms-flex-wrap:wrap;
+                              flex-wrap:wrap;
+                              margin:0;
+                              padding:15px;
+                              position:relative;
+                              width:100%
+                              }
+                              .container--big{
+                                height:175vh
+                                }
+                                .container--full{
+                                  height:100vh
+                                  }
+                                  .container--small{
+                                    height:500px;
+                                    }
+                                    .container .content{
+                                      position:absolute;
+
+                                      background:rgba(0,0,0,.75);
+                                      border-radius:8px;
+                                      color:#fff;
+                                      margin:0 auto;
+                                      padding:30px 35px;
+                                      text-align:center;
+                                      opacity:0.5;
+                                    }
+                                      .parallax__container{
+                                        clip:rect(0,auto,auto,0);
+                                        height:100%;
+                                        left:0;
+                                        overflow:hidden;
+                                        position:absolute;
+                                        top:0;
+                                        width:100%;
+                                        z-index:-100
+                                        }
+                                        .parallax__container .parallax{
+                                          background-position:center;
+                                          background-repeat:no-repeat;
+                                          background-size:cover;
+                                          position:fixed;
+                                          top:0;
+                                          -webkit-transform:translate3d(0,0,0);
+                                          transform:translate3d(0,0,0);
+                                          -webkit-transform-style:preserve-3d;
+                                          transform-style:preserve-3d;
+                                          width:100%
+                                          }
+                                          .show-on-mobile--inline{
+                                            display:none
+                                            }
+                                            .arrow{
+                                              -webkit-animation:bounce 3s infinite;
+                                              animation:bounce 3s infinite;
+                                              bottom:-64px;
+                                              bottom:-4rem;
+                                              left:calc(50% - 19px);
+                                              position:absolute;
+                                              -webkit-transform:translateX(-50%);
+                                              -ms-transform:translateX(-50%);
+                                              transform:translateX(-50%);
+                                              transition:opacity 250ms ease-in-out;
+                                              width:38px}
+                                              .arrow--hide{
+                                                opacity:0}
+                                                @-webkit-keyframes bounce{0%,100%,20%,50%,80%{-webkit-transform:translateY(0);transform:translateY(0)}40%{-webkit-transform:translateY(-15px);transform:translateY(-15px)}60%{-webkit-transform:translateY(-5px);transform:translateY(-5px)}}@keyframes bounce{0%,100%,20%,50%,80%{-webkit-transform:translateY(0);transform:translateY(0)}40%{-webkit-transform:translateY(-15px);transform:translateY(-15px)}60%{-webkit-transform:translateY(-5px);transform:translateY(-5px)}}@media screen and (max-width:480px){.hide-on-mobile{display:none}.show-on-mobile--inline{display:inline}}
 </style>
 <body>
 
@@ -216,101 +326,82 @@ a{
   </div>
 </header>
 
-<div class="vid" style="margin-top:100px">
-  <h2 style="margin-left:5px">BACKGROUND</h2>  
-<div class="parallax-window" data-parallax="scroll" data-image-src="assets/images/bgimg-1.png">
-  <div class="caption">
-    <p>
-      OptiMining Pty Ltd was established in 2012 to develop the iOS app, HaulSmart, to capture basic cycle time and productivity data for remote earthworks projects in Malawi and Namibia. We were seeking an easily deployable solution that would utilise new mobile devices and cloud servers for HME data capture using inbuilt device sensors and 3G networks in order to download CSV files into our existing daily production spreadsheets as part of Consultancy and Contract Services.
-     </p>
-</div>
-</div>
-  <div id="section1" >  
-  <div >
-  <div >
-    <br/>
-    <!--<input type="button" value="FIND OUT MORE"/>-->
-    <br/><br/><br/>
-  </div>
-  </div>
-</div>
+<main class="vid" style="margin-top:100px">
 
+  <h2 style="margin-left:5px">BACKGROUND</h2> 
+  <section class="container container--small">
+    <div class="content">
+      <p>
+        OptiMining Pty Ltd was established in 2012 to develop the iOS app, HaulSmart, to capture basic cycle time and productivity data for remote earthworks projects in Malawi and Namibia. We were seeking an easily deployable solution that would utilise new mobile devices and cloud servers for HME data capture using inbuilt device sensors and 3G networks in order to download CSV files into our existing daily production spreadsheets as part of Consultancy and Contract Services.
+     </p>
+     <input type="button" value="FIND OUT MORE"/>
+    </div>
+    <div class="parallax__container">
+      <div class="parallax" data-parallax-image="assets/images/bgimg-1.png"></div>
+    </div>
+    <br/><br/>
+    </section> 
 
 <h2 style="margin-left:5px">HAULSMART APPS AND WEBSITE</h2>
-    <div class="parallax-window" data-parallax="scroll" data-image-src="assets/images/bgimg-3.png">
-      <div class="caption">
-        <p style="color:rgb(255, 255, 255)">
-          We further developed the HaulSmart website to geospatially visualize data on Google Maps from our own iOS and progressive web apps (PWAs), plus data from other sources such as Drone Images and Videos, OEM API's, and survey DXF's, to create a shared platform for site personnel to assist with meetings, production reporting and live short interval control.
+<section class="container container--small">
+  <div class="content">
+    <p>
+      We further developed the HaulSmart website to geospatially visualize data on Google Maps from our own iOS and progressive web apps (PWAs), plus data from other sources such as Drone Images and Videos, OEM API's, and survey DXF's, to create a shared platform for site personnel to assist with meetings, production reporting and live short interval control.
          </p>
-      </div>    
-    </div>
-    <div id="section3" >  
-      <div >
-      <div >
-        <br/>
-       <input type="button" value="FIND OUT MORE"/>
-        <br/><br/><br/>
-      </div>
-    </div>
+         <input type="button" value="FIND OUT MORE"/>
   </div>
+  <div class="parallax__container">
+    <div class="parallax" data-parallax-image="assets/images/bgimg-3.png"></div>
+  </div>
+  <br/><br/>
+  </section> 
 
   <h2 style="margin-left:5px">BIG DATA AND ANALYTICS</h2>
-  <div class="parallax-window" data-parallax="scroll" data-image-src="assets/images/bgimg-2.png">
-    <div class="caption">
-      <p>
-        We can assist digitizing your earthworks or mining operation with establishing and managing your cloud server architecture to store all operational data into a secure AWS data lake. Using the latest technology we can visualize data in a user friendly and intuitive format on our platform for all personnel levels across your operations.
-       </p>
-    </div>  
+  <section class="container container--small">
+  <div class="content">
+    <p>
+      We can assist digitizing your earthworks or mining operation with establishing and managing your cloud server architecture to store all operational data into a secure AWS data lake. Using the latest technology we can visualize data in a user friendly and intuitive format on our platform for all personnel levels across your operations.
+     </p>
+     <input type="button" value="FIND OUT MORE"/>
   </div>
-  <div id="section2" >  
-    <div  >
-    <div >
-      <br/>
-      <input type="button" value="FIND OUT MORE"/>
-      <br/><br/><br/>
-    </div>
+  <div class="parallax__container">
+    <div class="parallax" data-parallax-image="assets/images/bgimg-2.png"></div>
   </div>
-</div>
-
-<h2 style="margin-left:5px">MINING ENGINEERING AND PRODUCTIVITY CONSULTING</h2>
-  <div class="parallax-window" data-parallax="scroll" data-image-src="assets/images/bgimg-4.png">
-    <img src="assets/images/drone.png" style="position:absolute;top:20px;right:100px;width:80px"/>
-    <div class="caption">
-
+  <br/><br/>
+  </section>
+  
+  <h2 style="margin-left:5px">MINING ENGINEERING AND PRODUCTIVITY CONSULTING</h2>
+  <section class="container container--small">
+    <div class="content">
+      <img src="assets/images/drone.png" style="position:absolute;top:20px;right:100px;width:80px"/>
       <p>
         With our own purpose built apps in our toolbox, we can mobilise to site and quickly set up data capture tools on your machines and present our findings in real time. Using drone footage we can also provide supporting footage with analytics to clarify our findings. 
        </p>
-    </div>  
-  </div>
-  <div id="section4" >  
-    <div  >
-    <div >
-      <br/>
-      <input type="button" value="FIND OUT MORE"/>
-      <br/><br/><br/>
+       <input type="button" value="FIND OUT MORE"/>
     </div>
-  </div>
-</div>
+    <div class="parallax__container">
+      <div class="parallax" data-parallax-image="assets/images/bgimg-4.png"></div>
+    </div>
+    <br/><br/>
+    </section>
+
 
   <h2 style="margin-left:5px">CONTACT US</h2>
-    <div class="parallax-window" data-parallax="scroll" data-image-src="assets/images/bgimg-5.png">
-      <div class="caption">
-        <p>
-          Our Senior Mining Engineer, Jon Morgan, has 25 years operational experience in engineering, supervisory and management roles on earthworks, construction and greenfield mining projects in Australia, Tanzania, Namibia, Malawi, Mozambique, Zambia and Ghana. 
-         </p>       
-      </div>    
+  <section class="container container--small">
+    <div class="content">
+      <p>
+        Our Senior Mining Engineer, Jon Morgan, has 25 years operational experience in engineering, supervisory and management roles on earthworks, construction and greenfield mining projects in Australia, Tanzania, Namibia, Malawi, Mozambique, Zambia and Ghana. 
+      </p>
+      <input type="button" value="FIND OUT MORE"/>
     </div>
-    <div id="section5" style="width:60%">  
-      <div >
-      <div >
-        <br/>
-       <input type="button" value="FIND OUT MORE"/>
-        <br/><br/><br/>
-      </div>
+    <div class="parallax__container">
+      <div class="parallax" data-parallax-image="assets/images/bgimg-5.png"></div>
     </div>
-  </div>
-    </div>
-  <footer style="position:relative;margin-top:50px;text-align:center;height:500px" >
+   
+    <br/><br/>
+    </section>
+  </main>
+  <footer style="position:relative;margin-top:50px;text-align:center;height:200px" >
    <br/>
    <br/>
    <br/>
@@ -455,6 +546,10 @@ function hideMenu(){
 }
 
  </script> 
+ <script src="parallax.min.js"></script>
+ <script>
+  new universalParallax().init(); 
+ </script>
 </body>
 
 </html>
