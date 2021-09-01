@@ -241,7 +241,7 @@ a{
                                   height:100vh
                                   }
                                   .container--small{
-                                    height:100vh;
+                                    height:75vw;
                                     }
                                     .container .content{
                                       position:absolute;
@@ -275,24 +275,7 @@ a{
                                           transform-style:preserve-3d;
                                           width:100%
                                           }
-                                          .show-on-mobile--inline{
-                                            display:none
-                                            }
-                                            .arrow{
-                                              -webkit-animation:bounce 3s infinite;
-                                              animation:bounce 3s infinite;
-                                              bottom:-64px;
-                                              bottom:-4rem;
-                                              left:calc(50% - 19px);
-                                              position:absolute;
-                                              -webkit-transform:translateX(-50%);
-                                              -ms-transform:translateX(-50%);
-                                              transform:translateX(-50%);
-                                              transition:opacity 250ms ease-in-out;
-                                              width:38px}
-                                              .arrow--hide{
-                                                opacity:0}
-                                                @-webkit-keyframes bounce{0%,100%,20%,50%,80%{-webkit-transform:translateY(0);transform:translateY(0)}40%{-webkit-transform:translateY(-15px);transform:translateY(-15px)}60%{-webkit-transform:translateY(-5px);transform:translateY(-5px)}}@keyframes bounce{0%,100%,20%,50%,80%{-webkit-transform:translateY(0);transform:translateY(0)}40%{-webkit-transform:translateY(-15px);transform:translateY(-15px)}60%{-webkit-transform:translateY(-5px);transform:translateY(-5px)}}@media screen and (max-width:480px){.hide-on-mobile{display:none}.show-on-mobile--inline{display:inline}}
+
 </style>
 <body>
 
@@ -312,6 +295,7 @@ a{
   <div class="line"></div>
 </div>
 </div>
+<header>
   <div class="vid" style="position:relative;z-index:0;margin:auto">
     <video id="movie" loop="true" muted autoplay playsinline>
       <source src="header.mp4" type='video/mp4; codecs=avc1.42E01E, mp4a.40.2"' />  
@@ -324,7 +308,7 @@ a{
   </div>
 </header>
 
-<main class="vid" style="margin-top:600px">
+<main class="vid" style="margin-top:100px">
 
   <h2 style="margin-left:5px">BACKGROUND</h2> 
   <section class="container container--small">
@@ -393,17 +377,14 @@ a{
       <input type="button" value="FIND OUT MORE"/>
     </div>
     <div class="parallax__container">
-      <div class="parallax" data-parallax-image="assets/images/bgimg-5.png"></div>
+      <div class="parallax" data-parallax-image="assets/images/bgimg-5.png" ></div>
     </div>
    
     <br/><br/>
     </section>
   </main>
 
-  <div class="vid" style="position:relative;z-index:0;margin:auto">
-   </div>
-
-  <footer style="position:relative;margin-top:50px;text-align:center;height:500px" >
+  <footer class="vid" style="position:relative;margin-top:50px;text-align:center;height:500px" >
     <video id="movie" loop="true" muted autoplay playsinline>
       <source src="header.mp4" type='video/mp4; codecs=avc1.42E01E, mp4a.40.2"' />  
     </video>
