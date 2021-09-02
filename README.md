@@ -2,6 +2,8 @@
 
 As part of this week's homework, rather than develop a portfolio page for me personally, I have developed a page for my own consultancy company that will showcase the projects I have worked and experience, the type of work I do, and what I can offer to companies as a mining consultant that has web/app developer & data analytics skills to solve issues or implement digitised solutions for their operations. The reason for this is due to time limitations, and I want to use skills gained in the course to improve and value add to my existing portfolio of work.
 
+https://jonmorg-hs.github.io/homework_wk2/
+
 <img src="assets/images/screenshot.png">
 
 The homework required using responsive CSS, and I have some more work to do with the clipping of background images for the parallax scrolling effect.

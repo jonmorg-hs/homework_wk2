@@ -1,20 +1,17 @@
  /* color scheme sourced from http://khroma.co/generator/ */
  :root {
-  --outer-space: #33393f;
-  --bright-turquoise: #2aefcb;
-  --gin: #e0eae4;
-  --heliotrope: #ffffff;
+  --background: #33393f;
 }
 /* set content highlight color and background */
 ::selection {
-  background-color: var(--bright-turquoise);
-  color: var(--outer-space);
+  background-color: var(--background);
+  color: var(--background);
 }
 html,body{
   height:100%;
   width:100%;
   margin:0px;
-  background-color: var(--outer-space);
+  background-color: var(--background);
 } 
 *,:after,:before{
   box-sizing:border-box
@@ -24,8 +21,8 @@ position:fixed;
 width:300px;
 height:100%;
 z-index:99;
-background-color:var(--outer-space);
-box-shadow: 0 0 0px 5px var(--outer-space);
+background-color:var(--background);
+box-shadow: 0 0 0px 5px var(--background);
 display:none;
 } 
 #menu_btn{
@@ -52,6 +49,9 @@ font:normal 16px Arial;
 letter-spacing:5px; 
 text-decoration:none;
 }
+
+/* Blinking heading below header */
+
 #movietext{
   position:absolute;
   left:5px;
@@ -63,6 +63,9 @@ text-decoration:none;
   color:rgb(0,204,0);
   bottom: calc(2vw + 2px)*-1;
 } 
+
+/* Canvas used for casading code effect above video element */
+
 canvas{
     position: absolute;
     top:0px;
@@ -106,6 +109,9 @@ margin-bottom:20px
 p:last-child{
 margin-bottom:0
 }
+
+/* parallax scrolling effect */
+
 .container{
 -webkit-align-items:center;
 align-items:center;
@@ -155,6 +161,9 @@ transform:translate3d(0,0,0);
 transform-style:preserve-3d;
 width:100%
 }
+
+/* styling 'Find Our More' buttons */
+
 input[type=button] {
   width: 200px;
   height: 30px;
@@ -164,6 +173,7 @@ input[type=button] {
   border:none;
   cursor:pointer;
 }
+
 footer{
   position:relative;
   margin-top:50px;
@@ -176,6 +186,9 @@ footer{
   width:50px;
   height:50px;
 }
+
+/* Company Logo in header element */
+
 .logo{
   opacity:0.5;
   position:absolute;
@@ -185,8 +198,11 @@ footer{
   max-width:200px;
   width:30%"
 }
+
+
+/* media query for varying screens */
+
 @media screen and (min-width: 768px) {
-  /* on tablets, set columns to only be 50% of the width and not grow */
   .vid,section{
     max-width: 100%;
     margin:auto;
@@ -200,7 +216,6 @@ footer{
   }
 }
 
-/* media query for larger screens */
 @media screen and (min-width: 1500px) {
   .vid,section{
     max-width: 1500px; 
@@ -215,7 +230,6 @@ footer{
   }  
 }
 @media screen and (max-width: 768px) {
-  /* on tablets, set columns to only be 50% of the width and not grow */
   .vid,section{
     max-width: 100%;
     margin:auto;
