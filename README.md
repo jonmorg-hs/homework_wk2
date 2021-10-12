@@ -15,7 +15,3 @@ Homework requirements completed were:
 https://jonmorg-hs.github.io/homework_wk2/
 
 <img src="assets/images/screenshot.png">
-
-1.
-
-2. Updated Github Profile

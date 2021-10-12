@@ -1,255 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/optimining_icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="assets/images/optimining_icon.png"
+      type="image/x-icon"
+    />
+    <title>OPTIMINING</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <style></style>
+  <body>
+    <img id="menu_btn" src="assets/images/menu_btn.png" onclick="showMenu()" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="assets/images/optimining_icon.png" type="image/x-icon">
-  <link rel="icon" href="assets/images/optimining_icon.png" type="image/x-icon">
-  <title>OPTIMINING</title>
-<link rel="stylesheet" href="assets/css/reset.css" />
-<link rel="stylesheet" href="./assets/css/style.css" />
-</head>
-<style>
- 
-
-</style>
-<body>
-  <img id="menu_btn" src="assets/images/menu_btn.png" onclick="showMenu()"/>
-    
-  <div id="menu">
-  <img src="assets/images/close_btn.png" onclick="hideMenu()" style="margin-left:15px;margin-top:15px;width:50px;height:50px"/>
-  <br/><br/><br/>
-  <div >
-  <div class="menu_option" onclick="hideMenu()"><a href="#section1">BACKGROUND</a></div>
-  <div class="line"></div>
-  <div class="menu_option" onclick="hideMenu()"><a href="#section3">HAULSMART APPS</a></div>
-  <div class="line"></div>
-  <div class="menu_option" onclick="hideMenu()"><a href="#section2">DATA ANALYTICS</a></div>
-  <div class="line"></div>
-  <div class="menu_option" onclick="hideMenu()"><a href="#section4">CONSULTING</a></div>
-  <div class="line"></div>
-  <div class="menu_option" onclick="hideMenu()"><a href="#section5">CONTACT US</a></div>
-  <div class="line"></div>
-</div>
-</div>
-
-<header>
-  <div class="vid" >
-    <video id="movie" loop="true" muted autoplay playsinline>
-      <source src="header.mp4" type='video/mp4; codecs=avc1.42E01E, mp4a.40.2"' />  
-    </video>
-    <canvas id="myCanvas" ></canvas>
-    <img src="assets/images/Optimining Logo.png" class="logo"/>
-    <div id="movietext">
+    <div id="menu">
+      <img
+        src="assets/images/close_btn.png"
+        onclick="hideMenu()"
+        style="margin-left: 15px; margin-top: 15px; width: 50px; height: 50px"
+      />
+      <br /><br /><br />
+      <div>
+        <div class="menu_option" onclick="hideMenu()">
+          <a href="#section1">BACKGROUND</a>
+        </div>
+        <div class="line"></div>
+        <div class="menu_option" onclick="hideMenu()">
+          <a href="#section3">HAULSMART APPS</a>
+        </div>
+        <div class="line"></div>
+        <div class="menu_option" onclick="hideMenu()">
+          <a href="#section2">DATA ANALYTICS</a>
+        </div>
+        <div class="line"></div>
+        <div class="menu_option" onclick="hideMenu()">
+          <a href="#section4">CONSULTING</a>
+        </div>
+        <div class="line"></div>
+        <div class="menu_option" onclick="hideMenu()">
+          <a href="#section5">CONTACT US</a>
+        </div>
+        <div class="line"></div>
+        <div class="menu_option" onclick="hideMenu();downloadResume()">
+          <a href="#section5">RESUME</a>
+        </div>
+        <div class="line"></div>
+      </div>
     </div>
-  </div>
-</header>
 
-<main class="vid" style="margin-top:70px">
+    <header>
+      <div class="vid">
+        <video id="movie" loop="true" muted autoplay playsinline>
+          <source
+            src="header.mp4"
+            type='video/mp4; codecs=avc1.42E01E, mp4a.40.2"'
+          />
+        </video>
+        <canvas id="myCanvas"></canvas>
+        <img src="assets/images/Optimining Logo.png" class="logo" />
+        <div id="movietext"></div>
+      </div>
+    </header>
 
-  <h2 >BACKGROUND</h2> 
-  <section id="section1" class="container">
-    <div class="content">
-      <p>
-        OptiMining Pty Ltd was established in 2012 to develop the iOS app, HaulSmart, to capture basic cycle time and productivity data for remote earthworks projects in Malawi and Namibia. We were seeking an easily deployable solution that would utilise new mobile devices and cloud servers for HME data capture using inbuilt device sensors and 3G networks in order to download CSV files into our existing daily production spreadsheets as part of Consultancy and Contract Services.
-     </p>
-     <input type="button" value="FIND OUT MORE" onclick="openPage('background')"/>
-    </div>
-    <div class="parallax__container">
-      <div class="parallax" data-parallax-image="assets/images/bgimg-1.png"></div>
-    </div>
-    <br/><br/>
-    </section> 
+    <main class="vid" style="margin-top: 70px">
+      <h2>BACKGROUND</h2>
+      <section id="section1" class="container">
+        <div class="content">
+          <p>
+            OptiMining Pty Ltd was established in 2012 to develop the iOS app,
+            HaulSmart, to capture basic cycle time and productivity data for
+            remote earthworks projects in Malawi and Namibia. We were seeking an
+            easily deployable solution that would utilise new mobile devices and
+            cloud servers for HME data capture using inbuilt device sensors and
+            3G networks in order to download CSV files into our existing daily
+            production spreadsheets as part of Consultancy and Contract
+            Services.
+          </p>
+          <input
+            type="button"
+            value="FIND OUT MORE"
+            onclick="openPage('background')"
+          />
+        </div>
+        <div class="parallax__container">
+          <div
+            class="parallax"
+            data-parallax-image="assets/images/bgimg-1.png"
+          ></div>
+        </div>
+        <br /><br />
+      </section>
 
-<h2 >HAULSMART APPS AND WEBSITE</h2>
-<section id="section3" class="container">
-  <div class="content">
-    <p>
-      We further developed the HaulSmart website to geospatially visualize data on Google Maps from our own iOS and progressive web apps (PWAs), plus data from other sources such as Drone Images and Videos, OEM API's, and survey DXF's, to create a shared platform for site personnel to assist with meetings, production reporting and live short interval control.
-    </p>
-    <input type="button" value="FIND OUT MORE" onclick="openPage('haulsmart')"/>
-  </div>
-  <div class="parallax__container">
-    <div class="parallax" data-parallax-image="assets/images/bgimg-3.png"></div>
-  </div>
-  <br/><br/>
-  </section> 
+      <h2>HAULSMART APPS AND WEBSITE</h2>
+      <section id="section3" class="container">
+        <div class="content">
+          <p>
+            We further developed the HaulSmart website to geospatially visualize
+            data on Google Maps from our own iOS and progressive web apps
+            (PWAs), plus data from other sources such as Drone Images and
+            Videos, OEM API's, and survey DXF's, to create a shared platform for
+            site personnel to assist with meetings, production reporting and
+            live short interval control.
+          </p>
+          <input
+            type="button"
+            value="FIND OUT MORE"
+            onclick="openPage('haulsmart')"
+          />
+        </div>
+        <div class="parallax__container">
+          <div
+            class="parallax"
+            data-parallax-image="assets/images/bgimg-3.png"
+          ></div>
+        </div>
+        <br /><br />
+      </section>
 
-  <h2 >BIG DATA AND ANALYTICS</h2>
-  <section id="section2" class="container">
-  <div class="content">
-    <p>
-      We can assist digitizing your earthworks or mining operation with establishing and managing your cloud server architecture to store all operational data into a secure AWS data lake. Using the latest technology we can visualize data in a user friendly and intuitive format on our platform for all personnel levels across your operations.
-     </p>
-     <input type="button" value="FIND OUT MORE" onclick="openPage('data')"/>
-  </div>
-  <div class="parallax__container">
-    <div class="parallax" data-parallax-image="assets/images/bgimg-2.png"></div>
-  </div>
-  <br/><br/>
-  </section>
-  
-  <h2 >MINING ENGINEERING AND PRODUCTIVITY CONSULTING</h2>
-  <section id="section4" class="container">
-    <img src="assets/images/drone.png" style="position:absolute;top:20px;right:100px;width:80px"/>
-    <div class="content">
-      <p>
-        With our own purpose built apps in our toolbox, we can mobilise to site and quickly set up data capture tools on your machines and present our findings in real time. Using drone footage we can also provide supporting footage with analytics to clarify our findings. 
-       </p>
-       <input type="button" value="FIND OUT MORE" onclick="openPage('consulting')"/>
-    </div>
-    <div class="parallax__container">
-      <div class="parallax" data-parallax-image="assets/images/bgimg-4.png"></div>
-    </div>
-    <br/><br/>
-    </section>
+      <h2>BIG DATA AND ANALYTICS</h2>
+      <section id="section2" class="container">
+        <div class="content">
+          <p>
+            We can assist digitizing your earthworks or mining operation with
+            establishing and managing your cloud server architecture to store
+            all operational data into a secure AWS data lake. Using the latest
+            technology we can visualize data in a user friendly and intuitive
+            format on our platform for all personnel levels across your
+            operations.
+          </p>
+          <input
+            type="button"
+            value="FIND OUT MORE"
+            onclick="openPage('data')"
+          />
+        </div>
+        <div class="parallax__container">
+          <div
+            class="parallax"
+            data-parallax-image="assets/images/bgimg-2.png"
+          ></div>
+        </div>
+        <br /><br />
+      </section>
 
+      <h2>MINING ENGINEERING AND PRODUCTIVITY CONSULTING</h2>
+      <section id="section4" class="container">
+        <img
+          src="assets/images/drone.png"
+          style="position: absolute; top: 20px; right: 100px; width: 80px"
+        />
+        <div class="content">
+          <p>
+            With our own purpose built apps in our toolbox, we can mobilise to
+            site and quickly set up data capture tools on your machines and
+            present our findings in real time. Using drone footage we can also
+            provide supporting footage with analytics to clarify our findings.
+          </p>
+          <input
+            type="button"
+            value="FIND OUT MORE"
+            onclick="openPage('consulting')"
+          />
+        </div>
+        <div class="parallax__container">
+          <div
+            class="parallax"
+            data-parallax-image="assets/images/bgimg-4.png"
+          ></div>
+        </div>
+        <br /><br />
+      </section>
 
-  <h2 >PROJECTS</h2>
-  <section id="section5" class="container">
-    <div class="content">
-      <p>
-        Senior Mining Engineer & Web App Developer, Jon Morgan, has 25 years operational experience in engineering, supervision and management roles on earthworks, construction and greenfield mining projects in Australia, Tanzania, Namibia, Malawi, Mozambique, Zambia and Ghana. 
-      </p>
-      <input type="button" value="FIND OUT MORE" onclick="openPage('contact')"/>
-    </div>
-    <div class="parallax__container">
-      <div class="parallax" data-parallax-image="assets/images/bgimg-6.png" ></div>
-    </div>
-   
-    <br/><br/>
-    </section>
-  </main>
+      <h2>PROJECTS</h2>
+      <section id="section5" class="container">
+        <div class="content">
+          <p>
+            Senior Mining Engineer & Web App Developer, Jon Morgan, has 25 years
+            operational experience in engineering, supervision and management
+            roles on earthworks, construction and greenfield mining projects in
+            Australia, Tanzania, Namibia, Malawi, Mozambique, Zambia and Ghana.
+          </p>
+          <input
+            type="button"
+            value="FIND OUT MORE"
+            onclick="openPage('contact')"
+          />
+        </div>
+        <div class="parallax__container">
+          <div
+            class="parallax"
+            data-parallax-image="assets/images/bgimg-6.png"
+          ></div>
+        </div>
 
-  <footer class="vid" >
-    <video id="movie" loop="true" muted autoplay playsinline>
-      <source src="footer.mp4" type='video/mp4; codecs=avc1.42E01E, mp4a.40.2"' />  
-    </video>
-    <br/><br/>
-    <h2 >CONTACT US</h2>
-    <a href="tel:+61417301463" target="_black"><img src="assets/images/login_call.png" title="CALL JON ON +61 417301463" class="contact_btns"></a>
-    <a href="https://twitter.com/Optimining" target="_black"><img src="assets/images/login_twitter.png" title="FOLLOW US" class="contact_btns"></a>
-    <a href="mailto:admin@optimining.com.au?subject=General%20Enquiry" target="_black"><img src="assets/images/login_email.png" title="CONTACT US" class="contact_btns"></a>
-    <a href="https://www.linkedin.com/company/optimining-pty-ltd" target="_black"><img src="assets/images/login_linkedin.png" title="LINK WITH US" class="contact_btns"></a>
-    <br/><br/>
-    <h6>Copyright OptiMining Pty Ltd 2021</h6>
-    <br/><br/>
-  </footer>
+        <br /><br />
+      </section>
+    </main>
 
-<script>
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-var amountOfFallingArrays = 50;
-var squareDimension = 16;
-var fallingArrays = [];
+    <footer class="vid">
+      <video id="movie" loop="true" muted autoplay playsinline>
+        <source
+          src="footer.mp4"
+          type='video/mp4; codecs=avc1.42E01E, mp4a.40.2"'
+        />
+      </video>
+      <br /><br />
+      <h2>CONTACT US</h2>
+      <a href="tel:+61417301463" target="_black"
+        ><img
+          src="assets/images/login_call.png"
+          title="CALL JON ON +61 417301463"
+          class="contact_btns"
+      /></a>
+      <a href="https://twitter.com/Optimining" target="_black"
+        ><img
+          src="assets/images/login_twitter.png"
+          title="FOLLOW US"
+          class="contact_btns"
+      /></a>
+      <a
+        href="mailto:admin@optimining.com.au?subject=General%20Enquiry"
+        target="_black"
+        ><img
+          src="assets/images/login_email.png"
+          title="CONTACT US"
+          class="contact_btns"
+      /></a>
+      <a
+        href="https://www.linkedin.com/company/optimining-pty-ltd"
+        target="_black"
+        ><img
+          src="assets/images/login_linkedin.png"
+          title="LINK WITH US"
+          class="contact_btns"
+      /></a>
+      <br /><br />
+      <h6>Copyright OptiMining Pty Ltd 2021</h6>
+      <br /><br />
+    </footer>
 
-function FallingArray(x,y){
- this.x = x;
- this.y = y;
- this.letters = [];
- var amount = Math.floor(Math.random()*30) + 5;
- for(var a=0;a<amount;a++){
-   var charNum = Math.floor(Math.random()*50) + 35;
-   this.letters.push(String.fromCharCode(charNum));
- } 
-}
-
-for(var a=0;a<amountOfFallingArrays;a++){
-  var randomY = Math.floor(Math.random()*10) + squareDimension;
-  fallingArrays.push(new FallingArray(a*squareDimension,randomY));
-}
-
-for(var a=0;a<40;a++){
-  var randomX = Math.floor(Math.random()*40)*squareDimension;
-  var randomY = Math.floor(Math.random()*10)*squareDimension*-1;
-  fallingArrays.push(new FallingArray(randomX, randomY));
-}
-
-function cascadeData(){
-  var w = document.getElementById("myCanvas").width;
-  var h = document.getElementById("myCanvas").height;
-  t = w/400;
-  ctx.clearRect(0,0,w,h);
-  for(var a=0;a<fallingArrays.length;a++){
-    for(var b=0;b<fallingArrays[a].letters.length;b++){
-      var color = "rgb(0,255,0)";
-      if(b == 0){
-        ctx.fillStyle = "rgb(51,255,51)";
-      } else {
-        ctx.fillStyle = "rgb(0,128,0)";
-      }
-      //if(w<800)
-      //ctx.font = "8px Courier";
-      //} else {
-      ctx.font = t+"em Courier";
-      //}  
-      ctx.fillText(fallingArrays[a].letters[b], fallingArrays[a].x, fallingArrays[a].y + (-1 * b * squareDimension)); 
-    }
-    fallingArrays[a].y += squareDimension;
-    if(fallingArrays[a].y - fallingArrays[a].letters.length * squareDimension > h){
-      var randomX = Math.floor(Math.random()*40)*squareDimension;
-      var randomY = Math.floor(Math.random()*10)*squareDimension * -1;
-      fallingArrays[a] = new FallingArray(randomX, randomY);
-    }
-  }
-}
-
-setInterval(cascadeData,100)
-
-var movietext = ["PROJECT MANAGEMENT","MINING ENGINEERING","CONSULTING","TIME AND MOTION STUDIES","'BIG DATA' ANALYTICS","ANCILLARY UTILISATION","DRILL & BLAST - QA/QC","DIGITISED SOLUTIONS","WEBSITE & APP DEVELOPMENT"];
-
-var textpos = 0;
-function  cascadeText(){
-var str = movietext[textpos]; 
-document.getElementById("movietext").innerHTML=str; 
-if(textpos==8){
-textpos = 0; 
-} else {
-textpos = textpos +1;
-}
-}
-setTimeout(setInterval(cascadeText,1000),2000);
-
-
-var colortext = ["#99FF99","#33FF33","#00CC00","#009900"];
-var colorpos = 0;
-function  colorText(){
-var w = document.getElementById("myCanvas").width;
-var s = w/50;
-var hex = colortext[colorpos]; 
-document.getElementById("movietext").style.color=hex;  
-document.getElementById("movietext").style.fontSize = '2vm';
-document.getElementById("movietext").style.letterSpacing = s;
-if(colorpos==3){
-colorpos = 0; 
-} else {
-colorpos = colorpos +1;
-}
-}
-setInterval(colorText,100);
-
-function showMenu(){
-  var m = document.getElementById("menu").style.display="block";
-}
-
-function hideMenu(){
-  var m = document.getElementById("menu").style.display="none";
-}
-
-function openPage(id){
-if(id=='haulsmart'){
-window.open('https://www.haulsmart.com');	
-} else {
-	alert('Stay Tuned');
-}
-}
-
- </script> 
- <script src="parallax.min.js"></script>
- <script>
-  new universalParallax().init(); 
- </script>
-</body>
-
+    <script src="index.js"></script>
+    <script src="parallax.min.js"></script>
+    <script>
+      new universalParallax().init();
+    </script>
+  </body>
 </html>
