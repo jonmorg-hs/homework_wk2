@@ -122,8 +122,5 @@ function openPage(id) {
 }
 
 function downloadResume() {
-  var link = document.createElement("a");
-  link.href = url;
-  link.download = "assets/pdfs/JMorgan_Resume.pdf";
-  link.dispatchEvent(new MouseEvent("click"));
+  window.open("assets/pdfs/JMorgan_Resume.pdf", "_blank");
 }
