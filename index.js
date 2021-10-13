@@ -121,6 +121,4 @@ function openPage(id) {
   }
 }
 
-function downloadResume() {
-  window.open("assets/pdfs/JMorgan_Resume.pdf", "_blank");
-}
+function downloadResume() {}
