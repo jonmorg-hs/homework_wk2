@@ -120,5 +120,3 @@ function openPage(id) {
     alert("Stay Tuned");
   }
 }
-
-function downloadResume() {}
