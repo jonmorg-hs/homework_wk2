@@ -14,9 +14,9 @@ Links for contacts (call and email), Github, LinkedIn and Twitter
 
 3. Updated Portfolio page with downloadable link to my resume
 
-<img src="assets/images/screenshot_3.png">
-
 4. Updated LinkedIn profile
+
+<img src="assets/images/screenshot_3.png">
 
 https://jonmorg-hs.github.io/homework_wk2/
 
